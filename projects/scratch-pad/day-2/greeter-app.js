@@ -35,10 +35,21 @@
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    if (hour < 12) {
+        console.log("Good Morning!");
+    }
+    else if (hour < 17) {
+        console.log("Good Afternoon!");
+    }
+    else if (hour < 22) {
+        console.log("Good Evening!");
+    }
+    else {
+        console.log("Good Night!");
+    }
+
+
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -58,7 +69,7 @@ greeter(11);
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if((typeof process !== 'undefined') &&
+if ((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports.greeter = greeter;

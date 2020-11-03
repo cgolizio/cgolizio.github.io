@@ -12,10 +12,14 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  // loop through the array //
+  for (let i = 0; i < array.length; i++) {
+    // print the values of the array //
+    console.log(array[i]);
+  }
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -25,10 +29,14 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  // loop over the array in reverse //
+  for (let i = array.length - 1; i >= 0; i--) {
+    // print the arrays values to the console //
+    console.log(array[i]);
+  }
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -37,10 +45,18 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  // create an empty array to hold the object's keys //
+  let arr = [];
+  // loop through the object with a for in loop //
+  for (let key in object) {
+    // push the keys into the array //
+    arr.push(key);
+  }
+  // return the array //
+  return arr;
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -50,10 +66,14 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  // loop over the object //
+  for (let key in object) {
+    // print the objects keys to the console //
+    console.log(key);
+  }
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -62,10 +82,18 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  // create an empty array to hold the object's values //
+  let arr = [];
+  // loop through the object with a for in loop //
+  for (let key in object) {
+    // push the values into the array //
+    arr.push(object[key]);
+  }
+  // return the array //
+  return arr;
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -75,10 +103,14 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  // loop over the object //
+  for (let key in object) {
+    // print the object's values to the console //
+    console.log(object[key]);
+  }
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -87,10 +119,18 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  // create an empty array to hold the object's keys //
+  let arr = [];
+  // loop through the object with a for in loop //
+  for (let key in object) {
+    // push the keys into the array //
+    arr.push(key);
+  }
+  // return the array's length //
+  return arr.length;
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -100,10 +140,21 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  // create an empty array to hold the object's keys //
+  let arr = [];
+  // loop through the object with a for in loop //
+  for (let key in object) {
+    // push the values into the array //
+    arr.push(object[key]);
+  }
+  // loop through the array in reverse //
+  for (let i = arr.length - 1; i >= 0; i--) {
+    // print the array's items to the console with the reversed for loop //
+    console.log(arr[i]);
+  }
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -112,15 +163,15 @@ function printObjectValuesInReverse(object) {
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if((typeof process !== 'undefined') &&
-    (typeof process.versions.node !== 'undefined')) {
-    // here, export any references you need for tests //
-    module.exports.printArrayValues = printArrayValues;
-    module.exports.printArrayValuesInReverse = printArrayValuesInReverse;
-    module.exports.printObjectValues = printObjectValues;
-    module.exports.getObjectValues = getObjectValues;
-    module.exports.getObjectKeys = getObjectKeys;
-    module.exports.printObjectKeys = printObjectKeys;
-    module.exports.getObjectLength = getObjectLength;
-    module.exports.printObjectValuesInReverse = printObjectValuesInReverse;
+if ((typeof process !== 'undefined') &&
+  (typeof process.versions.node !== 'undefined')) {
+  // here, export any references you need for tests //
+  module.exports.printArrayValues = printArrayValues;
+  module.exports.printArrayValuesInReverse = printArrayValuesInReverse;
+  module.exports.printObjectValues = printObjectValues;
+  module.exports.getObjectValues = getObjectValues;
+  module.exports.getObjectKeys = getObjectKeys;
+  module.exports.printObjectKeys = printObjectKeys;
+  module.exports.getObjectLength = getObjectLength;
+  module.exports.printObjectValuesInReverse = printObjectValuesInReverse;
 }
