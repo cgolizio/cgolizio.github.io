@@ -23,10 +23,28 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
+    // create an array to house the range of numbers //
+    var result = [];
+    // use a conditional statement to determine if start is greater thban or less than end //
+    if (start < end) {
+        // use a while loop to loop through each number between the starting point, and the ending point + 1 //
+        while (start < end + 1) {
+            // push each number into the result array //
+            result.push(start);
+            // add 1 to start after each iteration //
+            start++;
+        }
+    }
+    else {
+        // if start is greater than end, do the opposite of the above code //
+        while (start > end - 1) {
+            result.push(start);
+            start--;
+        }
+    }
+    // return the result array //
+    return result;
+
     // YOUR CODE GOES ABOVE HERE //
 }
 
@@ -35,8 +53,8 @@ function range(start, end) {
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if((typeof process !== 'undefined') &&
-   (typeof process.versions.node !== 'undefined')) {
+if ((typeof process !== 'undefined') &&
+    (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports.range = range;
 }
