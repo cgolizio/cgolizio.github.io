@@ -20,8 +20,10 @@ header {
 nav {
     background: rgb(239, 80, 41);
     margin: 0 auto;
+    margin-bottom: 20px;
     display: flex;
     padding: 10px;
+    border-radius: 25px 100px / 120px;
 }
 
 nav header {
