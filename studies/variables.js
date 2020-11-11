@@ -6,8 +6,9 @@
  * Boolean, Array, Object or another data-type.  Variables are called so because once created, we
  * can CHANGE the value (and type of value) to which they point.
  *
- * 1. To create a variable we use the keyword, var, followed by a name (id or alias) for our
- * variable.
+ * 1. To create a variable we use one of three keywords: var, let, or const. The keyword you choose is
+ * then followed by a name (id or alias) to identify our variable. Each of the three keywords behave
+ * distinctly from one another, when used to declare/initialize variables.
  *
  * 2. There are 2 phases of using variables: declaration and initialization (or assignment).
  **/
