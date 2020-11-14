@@ -19,6 +19,11 @@
  *      <optional-return-statement>
  *  }
  * 
+ * Functions can also be assigned to, and used as variables. To do this simply use a
+ * variable declaration keyword (var, let or const), and a name for the variable. Then
+ * set it equal to the keyword function, followed by parentheses with optional parameters,
+ * and a block of code surrounded by curly braces.
+ * 
  * 2. In order to use variables which are declared and initialized on the global scope
  * and outside of the function scope, parameters must be included when the function
  * is created. When the function is called, if the function declaration contains parameters
@@ -28,5 +33,36 @@
  * 
  * <function-name>(<argument1>, <argument2>);
  * 
- * 3. 
+ * 3. Closures are when a nested, or child, function has access to the variables created
+ * in it's parent function, even though the parent function does not have access to any
+ * variable created inside the child function.
  */
+
+// 1. Parameters/Arguments //
+function exampleFunction(param1, param2) {
+    console.log(param1 + param2);
+}
+
+// in this example, 5 and 10 are the two arguments
+exampleFunction(5, 10); // prints => 15
+
+// 2. Named and Anonymous Functions //
+function namedFunc() {
+    console.log("This is a named function");
+}
+namedFunc(); // prints => "This is a named function"
+
+var anonFunc = function(name) { console.log("Hi, my name is " + name); };
+var anonCall = anonFunc("Christopher");
+console.log(anonCall); // prints => "Hi, my name is Christopher"
+
+// 3. Closures //
+function outerFunc(a) {
+    let b = a;
+    return function(c) {
+        return b + c;
+    };
+}
+
+let innerFunc = outerFunc(4);
+console.log(innerFunc(6)); // prints => 10
