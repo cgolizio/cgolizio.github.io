@@ -52,8 +52,8 @@ console.log(myName); // prints => bob
 /*
  * Const variables cannot be reassigned after being initialized.
  */
-theirNames = "They're nameless";
-console.log(theirNames); // An error is thrown
+// theirNames = "They're nameless";
+// console.log(theirNames); // An error would be thrown
 
 // NOTE: We can assign and re-assign anything to a variable //
 var myVariable = 1;
