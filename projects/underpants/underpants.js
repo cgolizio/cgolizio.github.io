@@ -519,13 +519,13 @@ _.some = function(collection, func) {
  * Examples:
  *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
  */
-_.reduce = function(array, func, seed) {
-    // input: an array, a function and a seed
+_.reduce = function(array, func, initialValue) {
+    // input: an array, a function and a seed (initialValue)
     // output: returns the return value of the final function call
     // constraints:
-    // edge cases: if no seed is given, use the first element as the seed
-    var prev = seed;
-    if (seed === undefined) {
+    // edge cases: if no initialValue is given, use the first element as the initialValue
+    var prev = initialValue;
+    if (initialValue === undefined) {
         prev = array[0];
         for (let i = 1; i < array.length; i++) {
             prev = func(prev, array[i], i);
